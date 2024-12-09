@@ -1,0 +1,67 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core"
+controllerName="com.rg.qm.rm.controller.Order">
+
+<Page title="Order Details">
+       <customHeader>
+			<Toolbar>
+				<Button type="Back" press="onPressBack" />
+				<ToolbarSpacer/>
+				<Title text="{ANLN1}-{TXT50}" level="H2"/>
+				<ToolbarSpacer/>
+			</Toolbar>
+     </customHeader> 
+	 
+	 <Table id="idOrdTab" items="{path: 'To_Order'}" alternateRowColors="true"> 
+	 <columns>
+	 <Column width="8em">
+	 <Text text="Order No."></Text>
+	 </Column>
+	 
+     <Column width="8em">
+	 <Text text="Year"></Text>
+	 </Column>
+
+	 <Column width="8em">
+	 <Text text="Planing Cost"></Text>
+	 </Column>
+
+	<Column width="8em">
+	 <Text text="Plant"></Text>
+	 </Column>
+
+	 <Column width="8em">
+	 <Text text="CostCenter"></Text>
+	 </Column>
+
+	<Column width="8em">
+	 <Text text="Rack ID"></Text>
+	 </Column>
+
+     <Column width="8em">
+	 <Text text="Rack Name"></Text>
+	 </Column>
+	 </columns>
+
+	 <items>
+	 <ColumnListItem >
+	 
+	 <Text text="{path: 'AUFNR'}"></Text>
+	 <Text text="{path: 'GJAHR'}"></Text>
+	 <Text text="{path: 'WTGBTR'}"></Text>
+	 <Text text="{path: 'WERKS'}"></Text>
+	 <Text text="{path: 'KOSTL'}"></Text>
+	 <Text text="{path: 'EQART'}"></Text>
+	 <Text text="{path: 'TYPBZ'}"></Text>
+	 
+	 </ColumnListItem>
+	 </items>
+	 
+	 
+	 
+
+	 </Table>
+
+
+
+</Page>
+</mvc:View>

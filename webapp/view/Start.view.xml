@@ -1,0 +1,101 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+controllerName="com.rg.qm.rm.controller.Start">
+<Page title="Rail Master Details">
+
+<Table id="idTab" alternateRowColors="true" items="{/ASSETSet}" itemPress="onIteamPress"
+   growing="true" growingThreshold="20">
+<headerToolbar>
+<OverflowToolbar>
+<content>
+<!-- <Title text="Rail Master Details"></Title>
+<ToolbarSpacer /> -->
+<Label text="CompanyCode:"></Label>
+<MultiComboBox id="idMltCnb" items="{/CMCODESet}" width="30%" placeholder="Enter Valid Company code">
+         <core:Item text="{BUKRS}" key="{BUKRS}"> </core:Item>
+</MultiComboBox>
+<!-- <Input value="" id="idCmcd" width="30%" showValueHelp="true" 
+ placeholder="Enter Valid Company code" valueHelpRequest="onHandelCompcd"></Input> -->
+ <Label text="Asset Class:"></Label>
+   <Input value="" id="idAscls" width="25%" showValueHelp="true"
+    placeholder="Enter Valid Ast. Class" valueHelpRequest="onHandelAstCls"></Input>
+   <Button text="GO" id="idGoBttn" press="showDetails" width="10%"></Button>
+</content>
+</OverflowToolbar>
+</headerToolbar>
+
+<infoToolbar>
+			<OverflowToolbar>
+				<Label text="Please press GO button for Details" />
+			</OverflowToolbar>
+</infoToolbar>
+
+<columns>
+<Column
+	width="8em">
+	<Text text="CmpCd" />
+</Column>
+<Column
+	width="8em">
+	<Text text="Ast.No" />
+</Column>
+<Column
+	width="8em">
+	<Text text="Ast.Des." />
+</Column>
+<Column
+	width="8em">
+	<Text text="Func.Loc" />
+</Column>
+<Column
+	width="8em">
+	<Text text="Equipmemnt" />
+</Column>
+<Column
+	width="8em">
+	<Text text="Equp.Des." />
+</Column>
+<Column
+	width="8em">
+	<Text text="Assembly" />
+</Column>
+</columns>
+
+<items>
+<ColumnListItem type="Navigation" >
+ <Text text="{path: 'BUKRS'}"></Text>
+ <Text text="{path: 'ANLN1'}"></Text>
+ <Text text="{path: 'TXT50'}"></Text>
+ <Text text="{path: 'TPLNR'}"></Text>
+ <Text text="{path: 'EQUNR'}"></Text>
+ <Text text="{path: 'EQKTU'}"></Text>
+ <Text text="{path: 'ZZBAUTL'}"></Text>
+
+ </ColumnListItem>   
+</items>
+
+
+
+
+</Table>
+
+
+
+
+
+<!-- <VBox class="sapUiSmallMargin">
+<f:SimpleForm id="idSform"
+   editable="true">
+   <Label text="CompanyCode"></Label>
+   <Input value="" id="idCmcd1" width="30%" showValueHelp="true"></Input>
+   <Label text="Asset Class"></Label>
+   <Input value="" id="idAsclss" width="25%" showValueHelp="true"></Input>
+   <Button text="GO" press="showDetails" width="10%"></Button>
+</f:SimpleForm>
+</VBox> -->
+
+
+ 
+</Page>
+</mvc:View>
