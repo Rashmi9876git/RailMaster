@@ -2,7 +2,7 @@
 
 specVersion: '3.0'
 metadata:
-  name: RailMaster
+  name: fiorilikeapp
 type: application
 builder:
   resources:

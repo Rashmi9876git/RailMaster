@@ -2,7 +2,7 @@ sap.ui.define(['com/rg/qm/rm/controller/BaseController',
                'sap/ui/core/routing/History'
 ],
      function(BaseController,History){
-        return BaseController.extend("com.rg.qm.rm.controller",{
+        return BaseController.extend("com.rg.qm.rm.controller.Order",{
 
             onInit: function(){
                 this.oRouter = this.getOwnerComponent().getRouter();
