@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: '3.0'
+metadata:
+  name: RailMaster
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          url: http://rashmir4dsap.rashmigroup.com:8001/
+          client: '300'
+        app:
+          name: ZZRAIL_MASTER
+          description: Rail Master
+          package: ZRASHMI
+          transport: R4DK922370
+        exclude:
+          - /test/
